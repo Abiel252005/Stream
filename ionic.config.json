@@ -1,0 +1,7 @@
+{
+  "name": "stream",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
