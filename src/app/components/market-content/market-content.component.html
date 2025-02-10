@@ -1,0 +1,55 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-searchbar placeholder="Search..."></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Comienza a navegar</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let category of categories" size="4">
+        <ion-card>
+          <img [src]="category.image" alt="{{ category.title }}">
+          <ion-card-content>
+            <h3>{{ category.title }}</h3>
+            <p>{{ category.items }} items</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h2>Tarjetas de regalo</h2>
+  <ion-row>
+    <ion-col *ngFor="let card of giftCards" size="3">
+      <ion-card class="gift-card">
+        <div class="image-container">
+          <img [src]="card.logo" alt="{{ card.name }}">
+          <div class="price-overlay">
+            <h2>{{ card.price }} MXN</h2>
+            <ion-button color="warning">Comprar ahora</ion-button>
+          </div>
+        </div>
+        <ion-card-content>
+          <h3>{{ card.name }}</h3>
+          <p>MEXICO</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <h2>Juegos de la semana</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let game of featuredGames" size="6">
+        <ion-card>
+          <img [src]="game.image" alt="{{ game.title }}">
+          <ion-card-content>
+            <h3>{{ game.title }}</h3>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

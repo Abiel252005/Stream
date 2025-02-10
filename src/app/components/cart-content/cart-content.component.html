@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Carrito de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list *ngIf="cartItems && cartItems.length > 0; else emptyCart">
+    <ion-item *ngFor="let item of cartItems" class="cart-item">
+      <ion-thumbnail slot="start" class="thumbnail-large">
+        <img [src]="item.image" alt="{{ item.title }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+        <p>Precio: ${{ item.price }}</p>
+        <ion-badge color="tertiary">Cantidad: {{ item.quantity }}</ion-badge>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="danger" (click)="removeItem(item)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #emptyCart>
+    <ion-card class="empty-cart-card">
+      <ion-card-content text-center>
+        <ion-icon name="cart-outline" size="large"></ion-icon>
+        <h2>Tu carrito está vacío</h2>
+        <p>Agrega algunos videojuegos para comenzar a comprar.</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+
+  <ion-footer *ngIf="cartItems && cartItems.length > 0">
+    <ion-toolbar>
+      <ion-row>
+        <ion-col>
+          <h2>Total: ${{ getTotalPrice() }}</h2>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="full" color="success" (click)="checkout()">
+            Finalizar Compra
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

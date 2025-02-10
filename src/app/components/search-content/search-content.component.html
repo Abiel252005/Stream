@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Busqueda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchQuery" debounce="500" placeholder="Buscar juego..." (ionInput)="filterGames()"></ion-searchbar>
+
+  <ion-segment [(ngModel)]="selectedCategory" (ionChange)="filterGames()" color="primary">
+    <ion-segment-button value="all">
+      Todos
+    </ion-segment-button>
+    <ion-segment-button value="top">
+      Top
+    </ion-segment-button>
+    <ion-segment-button value="action">
+      Acción
+    </ion-segment-button>
+    <ion-segment-button value="adventure">
+      Aventura
+    </ion-segment-button>
+    <ion-segment-button value="strategy">
+      Estrategia
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let game of filteredGames" size="6">
+        <ion-card class="game-card">
+          <img [src]="game.image" alt="{{ game.title }}">
+          <ion-card-content>
+            <h3>{{ game.title }}</h3>
+            <p class="game-price">${{ game.price }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

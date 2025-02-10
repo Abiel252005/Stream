@@ -1,0 +1,45 @@
+ion-content {
+    --background: #e6f7e6;
+    padding: 0 15px;
+}
+
+.cart-item {
+    background-color: #d4f4d2;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.thumbnail-large img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.empty-cart-card {
+    background-color: #f0fff0;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+h2 {
+    color: #388e3c;
+}
+
+ion-badge {
+    background-color: #4caf50;
+    color: white;
+}
+
+.footer-row {
+    padding: 15px;
+}
+
+.checkout-button {
+    --background: #4caf50;
+    --background-activated: #388e3c;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}

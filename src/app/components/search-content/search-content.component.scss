@@ -1,0 +1,52 @@
+
+.game-card {
+    background-color: var(--ion-color-light);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 12px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+ion-card-content {
+    padding: 16px;
+    text-align: center;
+}
+
+ion-card-content h3 {
+    color: var(--ion-color-dark);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.game-price {
+    color: var(--ion-color-primary);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    ion-card-content h3 {
+        font-size: 1em;
+    }
+
+    .game-price {
+        font-size: 1em;
+    }
+}
+
