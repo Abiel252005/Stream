@@ -20,13 +20,13 @@ export class CartContentComponent  implements OnInit {
       title: 'Minecraft',
       price: 29.99,
       quantity: 1,
-      image: 'https://products.eneba.games/resized-products/775e29241e8b57f2701c7e042ccbb53d_350x200_1x-0.jpg'
+      image: 'https://products.eneba.games/resized-products/Dbdx7ihzJk48bASi_G0jHEgx2obfGYE_tNyWsjtJ4a4_350x200_1x-0.png', 
     },
     {
       title: 'Elden Ring',
       price: 59.99,
       quantity: 2,
-      image: 'https://products.eneba.games/resized-products/34521862da29db9997e0e46d7ac0d742_350x200_1x-0.jpg'
+      image: 'https://products.eneba.games/resized-products/qx8Tbt_P4s0CUWhUi0zXERfNW1s7_qGS5WbBO_uVudI_350x200_1x-0.jpeg', 
     }
   ];
 

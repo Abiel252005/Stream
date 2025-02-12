@@ -9,12 +9,20 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let category of categories" size="4">
-        <ion-card>
+        <ion-card class="category-card">
           <img [src]="category.image" alt="{{ category.title }}">
           <ion-card-content>
             <h3>{{ category.title }}</h3>
             <p>{{ category.items }} items</p>
           </ion-card-content>
+          <div class="overlay">
+            <p class="description">Explora una amplia variedad de {{ category.title }}.</p>
+            <ion-icon 
+              [name]="category.isFavorite ? 'heart' : 'heart-outline'" 
+              class="favorite-icon" 
+              (click)="toggleFavorite(category)">
+            </ion-icon>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -43,13 +51,53 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let game of featuredGames" size="6">
-        <ion-card>
-          <img [src]="game.image" alt="{{ game.title }}">
+        <ion-card class="game-card">
+          <div class="image-container">
+            <img [src]="game.image" alt="{{ game.title }}">
+            <div class="price-overlay">
+              Desde {{ game.price }} MXN
+            </div>
+          </div>
           <ion-card-content>
             <h3>{{ game.title }}</h3>
+            <p class="region">{{ game.region }}</p>
+            <p class="favorites" (click)="toggleGameFavorite(game)">
+              <ion-icon [name]="game.isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+              {{ game.isFavorite ? 'Añadido a favoritos' : 'Añadir a favoritos' }}
+            </p>
+            <div class="action-buttons">
+              <ion-button size="small" color="primary" (click)="addToCart(game)">
+                Añadir al carrito
+              </ion-button>
+              <ion-button size="small" color="success" (click)="buyNow(game)">
+                Comprar
+              </ion-button>
+            </div>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+  
+  <h2>Categorías destacadas</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let category of categories" size="6">
+        <ion-card class="category-card">
+          <div class="image-container">
+            <img [src]="category.image" alt="{{ category.title }}">
+          </div>
+          <ion-card-content>
+            <h3>{{ category.title }}</h3>
+            <p>{{ category.items }} artículos</p>
+            <p class="favorites" (click)="toggleFavorite(category)">
+              <ion-icon [name]="category.isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+              {{ category.isFavorite ? 'Añadido a favoritos' : 'Añadir a favoritos' }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

@@ -1,0 +1,38 @@
+.custom-bg {
+    --background: #121212;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.custom-input {
+    --border-color: #0f0;
+    --highlight-color: #0f0;
+}
+
+.login-btn {
+    --background: #0f0;
+    --color: #121212;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #0f0;
+}
+
+.register-link a {
+    color: #0f0;
+    text-decoration: none;
+}

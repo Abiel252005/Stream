@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchContentComponent implements OnInit {
   searchQuery: string = ''; 
   selectedCategory: string = 'all'; 
-  games = [
+  games = [  
     { 
       title: 'Minecraft', 
       category: 'action', 

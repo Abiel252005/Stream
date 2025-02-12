@@ -1,0 +1,91 @@
+<ion-content class="account-page">
+  <!-- Sección: My Account -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>My account</ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none" button>
+      <ion-icon name="heart-outline" slot="start"></ion-icon>
+      <ion-label>Favourites</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="game-controller-outline" slot="start"></ion-icon>
+      <ion-label>My library</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="receipt-outline" slot="start"></ion-icon>
+      <ion-label>Orders</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- Sección: Balance -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Balance</ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none" button>
+      <ion-icon name="swap-horizontal-outline" slot="start"></ion-icon>
+      <ion-label>Transactions</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="gift-outline" slot="start"></ion-icon>
+      <ion-label>Redeem Gift Card</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="wallet-outline" slot="start"></ion-icon>
+      <ion-label>Add funds</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>My Profile</ion-label>
+    </ion-list-header>
+
+    <ion-item lines="none" button>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>My personal info</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-label>Change password</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="time-outline" slot="start"></ion-icon>
+      <ion-label>Login history</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="link-outline" slot="start"></ion-icon>
+      <ion-label>Connected apps</ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none" button>
+      <ion-icon name="shield-checkmark-outline" slot="start"></ion-icon>
+      <ion-label>Multi factor authentication</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item lines="none" button routerLink="/login">
+      <ion-icon name="log-out-outline" slot="start" routerLink="/.login"></ion-icon>
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

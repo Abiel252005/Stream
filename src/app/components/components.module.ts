@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MarketContentComponent } from './market-content/market-content.component';
 import { SearchContentComponent } from './search-content/search-content.component';
 import { CartContentComponent } from './cart-content/cart-content.component';
+import { ProfileContentComponent } from './profile-content/profile-content.component';
 
 
 
@@ -13,7 +14,8 @@ import { CartContentComponent } from './cart-content/cart-content.component';
   declarations: [
     MarketContentComponent,
     SearchContentComponent,
-    CartContentComponent
+    CartContentComponent,
+    ProfileContentComponent
 
   ],
   imports: [
@@ -25,7 +27,8 @@ import { CartContentComponent } from './cart-content/cart-content.component';
   exports: [
     MarketContentComponent,
     SearchContentComponent,
-    CartContentComponent
+    CartContentComponent,
+    ProfileContentComponent
   ]
 })
 export class ComponentsModule { }

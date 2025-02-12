@@ -1,0 +1,27 @@
+.account-page {
+    --ion-background-color: #5B2B9B;
+    --ion-text-color: white;
+}
+
+ion-list-header {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+}
+
+ion-item {
+    --background: transparent;
+    --color: white;
+    margin-bottom: 5px;
+}
+
+ion-icon {
+    font-size: 20px;
+}
+
+ion-label {
+    font-size: 16px;
+}
+
+ion-item::part(native) {
+    border-radius: 10px;
+}
